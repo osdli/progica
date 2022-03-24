@@ -7,8 +7,13 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Departments
  *
- * @ORM\Table(name="departments", indexes={@ORM\Index(name="departments_code_index", columns={"code"}), @ORM\Index(name="departments_region_code_foreign", columns={"region_code"})})
- * @ORM\Entity
+ * @ORM\Table(
+ *     name="departments",
+ *     indexes={
+ *     @ORM\Index(name="departments_code_index", columns={"code"}),
+ *     @ORM\Index(name="departments_region_code_foreign", columns={"region_code"})
+ * })
+ * @ORM\Entity(repositoryClass="App\Repository\DepartmentsRepository")
  */
 class Departments
 {
@@ -16,14 +21,14 @@ class Departments
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     *
+     * @ORM\GeneratedValue
      */
     private $id;
 
     /**
      * @var string
-     *
+     * @ORM\Id
      * @ORM\Column(name="code", type="string", length=3, nullable=false)
      */
     private $code;
@@ -43,12 +48,10 @@ class Departments
     private $slug;
 
     /**
-     * @var \Regions
+     * @var Regions
      *
      * @ORM\ManyToOne(targetEntity="Regions")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="region_code", referencedColumnName="code")
-     * })
+     * @ORM\JoinColumn(name="region_code", referencedColumnName="code")
      */
     private $regionCode;
 

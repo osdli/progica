@@ -36,15 +36,7 @@ class RegisterType extends AbstractType
                 'attr' => [
                     'placeholder' => 'Merci de saisir votre nom']
             ])
-            ->add('roles', TextType::class, [
-                'label' => 'Votre rôle',
-                'constraints' => new Length([
-                    'min' => 2,
-                    'max' => 50
-                ]),
-                'attr' => [
-                    'placeholder' => 'Merci de saisir votre nom']
-            ])
+
             ->add('email', EmailType::class, [
                 'label' => 'Votre email',
                 'constraints' => new Length([

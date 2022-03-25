@@ -56,6 +56,11 @@ class User
      */
     private $lastname;
 
+    /**
+     * @ORM\Column(type="string", length=13)
+     */
+    private $phone_number;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -117,6 +122,18 @@ class User
     public function setLastname(string $lastname): self
     {
         $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getPhoneNumber(): ?string
+    {
+        return $this->phone_number;
+    }
+
+    public function setPhoneNumber(string $phone_number): self
+    {
+        $this->phone_number = $phone_number;
 
         return $this;
     }

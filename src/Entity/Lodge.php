@@ -79,6 +79,23 @@ class Lodge
      */
     private $contact;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Regions::class, inversedBy="lodge")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $regions;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Departements::class, inversedBy="lodge")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $departements;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Cities::class, inversedBy="lodge")
+     */
+    private $cities;
+
     public function __construct()
     {
         $this->contact = new ArrayCollection();
@@ -247,6 +264,42 @@ class Lodge
                 $contact->setLodge(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getRegions(): ?Regions
+    {
+        return $this->regions;
+    }
+
+    public function setRegions(?Regions $regions): self
+    {
+        $this->regions = $regions;
+
+        return $this;
+    }
+
+    public function getDepartements(): ?Departements
+    {
+        return $this->departements;
+    }
+
+    public function setDepartements(?Departements $departements): self
+    {
+        $this->departements = $departements;
+
+        return $this;
+    }
+
+    public function getCities(): ?Cities
+    {
+        return $this->cities;
+    }
+
+    public function setCities(?Cities $cities): self
+    {
+        $this->cities = $cities;
 
         return $this;
     }

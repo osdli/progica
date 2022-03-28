@@ -13,22 +13,23 @@
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
 
-
-    <link href='{{ asset('') }}' rel='stylesheet'>
-    <link href='' rel='stylesheet'>
-    <style>
-        </style>
-
 </head>
 <body oncontextmenu='return false' class='snippet-body'>
 <div class="container">
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
-                <a class="link-secondary" href="#">Inscription</a>
+                {% if app.user %}
+                    <a class="link-secondary" href="{{ path('app_account') }}">Mon
+                        compte<small>({{ app.user.firstname }})</small></a> | <a
+                        href="{{ path('app_logout') }}">Déconnexion</a>
+                {% else %}
+                    <a href="{{ path('app_register') }}">Inscription</a>
+                {% endif %}
+
             </div>
             <div class="col-4 text-center">
-                <a class="blog-header-logo text-dark" href="#">PROGICA</a>
+                <a class="blog-header-logo text-dark" href="{{ path('app_default') }}">PROGICA</a>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
                 <a class="link-secondary" href="#" aria-label="Search">
@@ -39,7 +40,9 @@
                         <path d="M21 21l-5.2-5.2"/>
                     </svg>
                 </a>
-                <a class="btn btn-sm btn-outline-secondary" href="#">Connexion</a>
+                {% if not app.user %}
+                    <a class="btn btn-sm btn-outline-secondary" href="{{ path('app_login') }}">Connexion</a>
+                {% endif %}
             </div>
         </div>
     </header>
@@ -65,17 +68,17 @@
 </div>
 
 <footer class="blog-footer">
-    <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.
+    <p>Blog template built for <a href="https://getbootstrap.com/">PROGICA</a> by <a
+                href="https://twitter.com/mdo">@mdo</a>.
     </p>
     <p>
-        <a href="#">Back to top</a>
+        <a href="#">Plus haut</a>
     </p>
 </footer>
 
 </body>
 </html>
-<!DOCTYPE html>
-<html>
+
 
 
 

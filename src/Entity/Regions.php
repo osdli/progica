@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -42,6 +44,16 @@ class Regions
      */
     private $slug;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Lodge::class, mappedBy="regions", orphanRemoval=true)
+     */
+    private $lodge;
+
+    public function __construct()
+    {
+        $this->lodge = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -79,6 +91,36 @@ class Regions
     public function setSlug(string $slug): self
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Lodge>
+     */
+    public function getLodge(): Collection
+    {
+        return $this->lodge;
+    }
+
+    public function addLodge(Lodge $lodge): self
+    {
+        if (!$this->lodge->contains($lodge)) {
+            $this->lodge[] = $lodge;
+            $lodge->setRegions($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLodge(Lodge $lodge): self
+    {
+        if ($this->lodge->removeElement($lodge)) {
+            // set the owning side to null (unless already changed)
+            if ($lodge->getRegions() === $this) {
+                $lodge->setRegions(null);
+            }
+        }
 
         return $this;
     }

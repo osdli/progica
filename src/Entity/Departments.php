@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -41,6 +43,13 @@ class Departments
     private $name;
 
     /**
+     * @ORM\OneToMany(targetEntity=Lodge::class, mappedBy="departements", orphanRemoval=true)
+     */
+    private $lodge;
+
+
+
+    /**
      * @var string
      *
      * @ORM\Column(name="slug", type="string", length=255, nullable=false)
@@ -55,6 +64,11 @@ class Departments
      */
     private $regionCode;
 
+
+    public function __construct()
+    {
+        $this->lodge = new ArrayCollection();
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -107,6 +121,34 @@ class Departments
 
         return $this;
     }
+    /**
+     * @return Collection<int, Lodge>
+     */
+    public function getLodge(): Collection
+    {
+        return $this->lodge;
+    }
 
+    public function addLodge(Lodge $lodge): self
+    {
+        if (!$this->lodge->contains($lodge)) {
+            $this->lodge[] = $lodge;
+            $lodge->setDepartements($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLodge(Lodge $lodge): self
+    {
+        if ($this->lodge->removeElement($lodge)) {
+            // set the owning side to null (unless already changed)
+            if ($lodge->getDepartements() === $this) {
+                $lodge->setDepartements(null);
+            }
+        }
+
+        return $this;
+    }
 
 }

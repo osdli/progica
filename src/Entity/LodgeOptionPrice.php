@@ -18,12 +18,12 @@ class LodgeOptionPrice
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=lodge::class)
+     * @ORM\ManyToOne(targetEntity=Lodge::class)
      */
     private $lodge;
 
     /**
-     * @ORM\ManyToOne(targetEntity=option::class)
+     * @ORM\ManyToOne(targetEntity=Option::class)
      */
     private $options;
 

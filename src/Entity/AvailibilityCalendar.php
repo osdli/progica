@@ -28,7 +28,7 @@ class AvailibilityCalendar
     private $end_date;
 
     /**
-     * @ORM\ManyToOne(targetEntity=lodge::class)
+     * @ORM\ManyToOne(targetEntity=Lodge::class)
      */
     private $lodge_id;
 

@@ -75,7 +75,7 @@ class Lodge
     private $bedroom;
 
     /**
-     * @ORM\OneToMany(targetEntity=contact::class, mappedBy="lodge")
+     * @ORM\OneToMany(targetEntity=Contact::class, mappedBy="lodge")
      */
     private $contact;
 
@@ -86,7 +86,7 @@ class Lodge
     private $regions;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Departements::class, inversedBy="lodge")
+     * @ORM\ManyToOne(targetEntity=Departments::class, inversedBy="lodge")
      * @ORM\JoinColumn(nullable=false)
      */
     private $departements;

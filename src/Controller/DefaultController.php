@@ -6,11 +6,30 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class DefaultController extends AbstractController
+use Symfony\Component\HttpFoundation\Request;
+
+
+class SearchController extends AbstractController
 {
-    #[Route('/', name: 'app_default')]
-    public function index(): Response
+    /**
+     * @Route("/search", name="app_search")
+     */
+    public function searchCar(Request $request)
     {
-        return $this->render('default/index.html.twig');
+        return $this->render('search/index.html.twig', [
+            'controller_name' => 'SearchController',
+        ]);
     }
 }
+/*
+class SearchController extends AbstractController
+{
+    #[Route('/search', name: 'app_search')]
+    public function index(Request $request): Request
+    {
+        return $this->render('search/index.html.twig', [
+            'controller_name' => 'SearchController',
+        ]);
+    }
+}
+*/

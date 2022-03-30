@@ -6,30 +6,35 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-use Symfony\Component\HttpFoundation\Request;
+use App\Repository\RegionsRepository;
+use App\Repository\DepartmentsRepository;
+use App\Repository\CitiesRepository;
+
+use App\Repository\OptionRepository;
 
 
-class SearchController extends AbstractController
+
+class DefaultController extends AbstractController
 {
-    /**
-     * @Route("/search", name="app_search")
-     */
-    public function searchCar(Request $request)
+    #[Route('/', name: 'app_default')]
+    public function index(RegionsRepository $regionsRepo, DepartmentsRepository $departmentsRepo, CitiesRepository $citiesRepo, OptionRepository $optionRepo  ): Response
     {
-        return $this->render('search/index.html.twig', [
-            'controller_name' => 'SearchController',
+        return $this->render('default/index.html.twig', [
+            'regions' => $regionsRepo-> findAll(),
+            'departments' => $departmentsRepo-> findAll(),
+            'cities' => $citiesRepo-> findAll(),
+            'equipementsInt' => $optionRepo-> findByType(0),
+            'equipementsExt' => $optionRepo-> findByType(1),
+            'services' => $optionRepo-> findByType(2)
         ]);
     }
 }
+
+
 /*
-class SearchController extends AbstractController
-{
-    #[Route('/search', name: 'app_search')]
-    public function index(Request $request): Request
-    {
-        return $this->render('search/index.html.twig', [
-            'controller_name' => 'SearchController',
-        ]);
-    }
-}
+CitiesRepository $citiesRepo, 
+
+render
+            'cities' => $citiesRepo-> findAll(),
+
 */

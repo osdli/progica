@@ -1,0 +1,306 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<style>
+    .boutonDepliant {
+        text-decoration: none;
+        color: black;
+    }
+
+    .adestination {
+        text-decoration: none;
+        color: black;
+    }
+
+</style>
+<div class="container-home">
+    <div id="booking" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-md-push-5">
+                        <div class="booking-cta">
+                            <h1>Trouvez votre gîte campagnard</h1>
+                            <p>Avec PROGICA, l'association des propriétaires de gîtes campagnards, vous pourrez trouver
+                                grâce à notre plateforme de réservation, le gîte campagnard répondant à vos envies.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--------------------------- DESTINATION -------------------------->
+                    <div class="col-md-4 col-md-pull-7">
+                        <div class="booking-form">
+                            <form>
+                                <div class="form-group">
+                                    <span class="form-label">Votre destination</span>
+                                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+                                        <div class="dropdown">
+                                            <a aria-expanded="false" aria-haspopup="true" role="button"
+                                               data-toggle="dropdown" class="btn btn-light dropdown-toggle" href="#">
+                                                <span id="selectedR">Région</span><span class="caret"></span></a>
+                                            <ul class="dropdown-menu region">
+                                                {% for region in regions %}
+                                                    <li><a class="adestination" href="#">{{ region.name }}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="dropdown">
+                                            <a aria-expanded="false" aria-haspopup="true" role="button"
+                                               data-toggle="dropdown" class="btn btn-light dropdown-toggle" href="#">
+                                                <span id="selectedD">Département</span><span class="caret"></span></a>
+                                            <ul class="dropdown-menu departement">
+                                                {% for department in departments %}
+                                                    <li><a class="adestination" href="#">{{ department.code }}
+                                                            : {{ department.name }}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+
+                                        <div class="dropdown">
+                                            <a aria-expanded="false" aria-haspopup="true" role="button"
+                                               data-toggle="dropdown" class="btn btn-light dropdown-toggle" href="#">
+                                                <span id="selectedV">Ville</span><span class="caret"></span></a>
+                                            <ul class="dropdown-menu ville">
+                                                {% for city in cities %}
+                                                    <li><a class="adestination" href="#">{{ city.name }}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+
+                                    </div>
+
+                                    <div>
+                                        <label for="rayon">Rayon en km : </label>
+
+                                        <input type="range" id="rayon" name="rayon"
+                                               min="0" max="30" value="0" step="5" list="tickmarks">
+                                        <datalist id="tickmarks">
+                                            <option value="0" label="0">0</option>
+                                            <option value="5"></option>
+                                            <option value="10" label="10">10</option>
+                                            <option value="15"></option>
+                                            <option value="20" label="20">20</option>
+                                            <option value="25"></option>
+                                            <option value="30" label="30">30</option>
+                                            <option value="70"></option>
+                                            <option value="80"></option>
+                                            <option value="90"></option>
+                                            <option value="100" label="100%"></option>
+                                        </datalist>
+                                    </div>
+
+                                    <!-- <input class="form-control" type="text"
+                                           placeholder="Entrez une destination"> -->
+                                </div>
+                                <p>
+
+                                </p>
+
+                                <!--------------------------- FIN DESTINATION -------------------------->
+
+                                <!--------------------------- DATE -------------------------->
+                                <!--
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <div class="form-group">
+                                                                            <span class="form-label">Date début</span>
+                                                                            <input class="form-control" type="date" required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="form-group">
+                                                                            <span class="form-label">Date fin</span>
+                                                                            <input class="form-control" type="date" required>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                -->
+                                <!--------------------------- FIN DATE -------------------------->
+
+
+                                <!--
+                                                                <div class="row">
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <span class="form-label">Chambres</span>
+                                                                            <select class="form-control">
+                                                                                <option>1</option>
+                                                                                <option>2</option>
+                                                                                <option>3</option>
+                                                                            </select>
+                                                                            <span class="select-arrow"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <span class="form-label">Adults</span>
+                                                                            <select class="form-control">
+                                                                                <option>1</option>
+                                                                                <option>2</option>
+                                                                                <option>3</option>
+                                                                            </select>
+                                                                            <span class="select-arrow"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <span class="form-label">Enfants</span>
+                                                                            <select class="form-control">
+                                                                                <option>0</option>
+                                                                                <option>1</option>
+                                                                                <option>2</option>
+                                                                            </select>
+                                                                            <span class="select-arrow"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            -->
+
+                                <!--------------------------- CRITERES SUPPLEMENTAIRES -------------------------->
+                                <span class="form-label">Critères supplémentaires</span>
+
+                                <!--------------------------- CRITERES Equipement -------------------------->
+                                <p>
+                                    <button class="boutonDepliant btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#multiCollapseExample1" aria-expanded="false"
+                                            aria-controls="multiCollapseExample1">
+                                        Critère d'équipement &darr;
+                                    </button>
+                                </p>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                            <div class="card card-body">
+                                                <div class="accordion" id="accordionExample">
+                                                    <div class="card">
+                                                        <div class="card-header" id="headingOne">
+                                                            <h5 class="mb-0">
+                                                                <button class="boutonDepliant btn btn-link"
+                                                                        type="button" data-toggle="collapse"
+                                                                        data-target="#collapseOne" aria-expanded="false"
+                                                                        aria-controls="collapseOne">
+                                                                    Intérieur &darr;
+                                                                </button>
+                                                            </h5>
+                                                        </div>
+
+                                                        <div id="collapseOne" class="collapse"
+                                                             aria-labelledby="headingOne"
+                                                             data-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                                {% for equipementInt in equipementsInt %}
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                               value="" id="defaultCheck1">
+                                                                        <label class="form-check-label"
+                                                                               for="defaultCheck1">
+                                                                            {{ equipementInt.name }}
+                                                                        </label>
+                                                                    </div>
+                                                                {% endfor %}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card">
+                                                        <div class="card-header" id="headingTwo">
+                                                            <h5 class="mb-0">
+                                                                <button class="boutonDepliant btn btn-link collapsed"
+                                                                        type="button" data-toggle="collapse"
+                                                                        data-target="#collapseTwo" aria-expanded="false"
+                                                                        aria-controls="collapseTwo">
+                                                                    Extérieur &darr;
+                                                                </button>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseTwo" class="collapse"
+                                                             aria-labelledby="headingTwo"
+                                                             data-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                                {% for equipementExt in equipementsExt %}
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                               value="" id="defaultCheck2">
+                                                                        <label class="form-check-label"
+                                                                               for="defaultCheck1">
+                                                                            {{ equipementExt.name }}
+                                                                        </label>
+                                                                    </div>
+                                                                {% endfor %}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--------------------------- FIN CRITERES Equipement -------------------------->
+
+
+                                <!--------------------------- CRITERES Service -------------------------->
+                                <p>
+                                    <button class="boutonDepliant btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#multiCollapseExample2" aria-expanded="false"
+                                            aria-controls="multiCollapseExample2">
+                                        Critère de service &darr;
+                                    </button>
+                                </p>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                            <div class="card card-body">
+                                                {% for service in services %}
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                               id="defaultCheck3">
+                                                        <label class="form-check-label" for="defaultCheck1">
+                                                            {{ service.name }}
+                                                        </label>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--------------------------- FIN CRITERES Service -------------------------->
+
+                                <!--------------------------- FIN CRITERES SUPPLEMENTAIRES -------------------------->
+
+
+                                <!--------------------------- FIN BOUTON DE RECHERCHE -------------------------->
+
+                                <div class="form-btn">
+                                    <a href="{{ path('app_search') }}" class="submit-btn">Lancer la recherche</a>
+                                </div>
+                                <!--------------------------- FIN BOUTON DE RECHERCHE -------------------------->
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script>
+        $('.region a').click(function () {
+            $('#selectedR').text($(this).text());
+        });
+
+        $('.departement a').click(function () {
+            $('#selectedD').text($(this).text());
+        });
+
+        $('.ville a').click(function () {
+            $('#selectedV').text($(this).text());
+        });
+    </script>
+
+    {% endblock %}

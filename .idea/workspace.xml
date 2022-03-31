@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c9f99de-0a6d-43e7-b0f7-0f625ef121a4" name="Changes" comment="" />
+    <list default="true" id="3c9f99de-0a6d-43e7-b0f7-0f625ef121a4" name="Changes" comment="modif Houssem">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/photos-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/photos-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/photos-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/photos-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/photos-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Departments.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Departments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Regions.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Regions.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -130,6 +143,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="279OSm200hHBmFfMEXMZwNHk8Jl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -142,6 +156,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -150,11 +169,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648728838037</updated>
-      <workItem from="1648728841784" duration="743000" />
+      <workItem from="1648728841784" duration="1300000" />
+      <workItem from="1648730156716" duration="4896000" />
     </task>
+    <task id="LOCAL-00001" summary="modif Houssem">
+      <created>1648729766634</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648729766634</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="modif Houssem" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif Houssem" />
   </component>
 </project>

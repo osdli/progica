@@ -2,8 +2,8 @@ import "tailwindcss/tailwind.css"
 
 import Vue from "vue";
 import App from "./App.vue";
-import router from "../../../../../../Users/liapeyrard/Downloads/assets/vue/router";
-import store from "../../../../../../Users/liapeyrard/Downloads/assets/vue/store";
+import router from "./router";
+import store from "./store";
 
 
 new Vue({
@@ -12,3 +12,4 @@ new Vue({
   router,
   store
 }).$mount("#app");
+

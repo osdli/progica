@@ -62,7 +62,19 @@ class Departments
      * @ORM\ManyToOne(targetEntity="Regions")
      * @ORM\JoinColumn(name="region_code", referencedColumnName="code")
      */
+
+
     private $regionCode;
+
+  /*  /**
+     * @var Cities
+     *
+     * @ORM\ManyToOne(targetEntity="App\Entity\Cities")
+     * @ORM\JoinColumn(name="region_code", referencedColumnName="code" )
+     */
+
+
+    private $cities;
 
 
     public function __construct()

@@ -19,3 +19,4 @@ export default Vue.extend({
   components: { AppTitle, Navbar }
 });
 </script>
+

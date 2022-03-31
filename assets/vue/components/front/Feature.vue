@@ -3,7 +3,6 @@
     <svg
       class="flex-shrink-0 w-6 h-6 text-yellow-600"
       aria-hidden="true"
-      xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -27,7 +26,6 @@
 </template>
 
 <script lang="ts">
-
 import Vue from "vue";
 
 export default Vue.extend({
@@ -35,12 +33,12 @@ export default Vue.extend({
   props: {
     title: {
       type: String,
-      default: "Titre non défini"
+      default: "Titre non défini",
     },
     desc: {
       type: String,
-      default: "Description non définie"
-    }
-  }
+      default: "Description non définie",
+    },
+  },
 });
 </script>

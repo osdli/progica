@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../../../../../../../Users/liapeyrard/Downloads/assets/vue/views/Home.vue";
-import Informations from "../../../../../../../Users/liapeyrard/Downloads/assets/vue/views/Informations.vue";
-import Photos from "../../../../../../../Users/liapeyrard/Downloads/assets/vue/views/Photos.vue";
-import Contact from "../../../../../../../Users/liapeyrard/Downloads/assets/vue/views/Contact.vue";
+import Home from "../views/Home.vue";
+import Informations from "../views/Informations.vue";
+import Photos from "../views/Photos.vue";
+import Contact from "../views/Contact.vue";
 
 Vue.use(VueRouter);
 
@@ -13,9 +13,9 @@ export default new VueRouter({
   linkExactActiveClass: "active", 
   routes: [
     {
-      path: "/",
+      path: "/home",
       name: "Accueil",
-      component: Default
+      component: Home
     },
     {
       path: "/informations",
@@ -34,7 +34,8 @@ export default new VueRouter({
     },
     {
       path: "*",
-      redirect: "/"
+      redirect: "/home"
     }
   ]
 });
+

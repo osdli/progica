@@ -7,7 +7,7 @@
     >
     <span
       class="ml-2 text-xl font-extrabold tracking-tight text-white md:text-3xl"
-    >Titre du site</span>
+    >Progica</span>
   </div>
 </template>
 

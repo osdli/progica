@@ -18,7 +18,7 @@ class RegisterType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('phoneNumber')
+
             ->add('firstname', TextType::class, [
                 'label' => 'Votre prénom',
                 'constraints' => new Length([
@@ -36,6 +36,10 @@ class RegisterType extends AbstractType
                 ]),
                 'attr' => [
                     'placeholder' => 'Merci de saisir votre nom']
+            ])
+
+            ->add('phoneNumber', TextType::class,[
+                'label' => 'Votre numéro de téléphone'
             ])
 
             ->add('email', EmailType::class, [
@@ -67,7 +71,9 @@ class RegisterType extends AbstractType
             ])
             ->add('submit', SubmitType::class, [
                 'label' => "S'iscrire"
-            ]);
+            ])
+
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

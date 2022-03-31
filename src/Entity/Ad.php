@@ -43,11 +43,6 @@ class Ad
      */
     private $created_at;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Departments::class)
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $departments;
 
     /**
      * @ORM\OneToOne(targetEntity=Lodge::class, cascade={"persist", "remove"})
@@ -116,18 +111,6 @@ class Ad
     public function setCreatedAt(\DateTimeImmutable $created_at): self
     {
         $this->created_at = $created_at;
-
-        return $this;
-    }
-
-    public function getDepartments(): ?Departments
-    {
-        return $this->departments;
-    }
-
-    public function setDepartments(?Departments $departments): self
-    {
-        $this->departments = $departments;
 
         return $this;
     }

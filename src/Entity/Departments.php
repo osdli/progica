@@ -22,7 +22,7 @@ class Departments
     /**
      * @var int
      *
-     * @ORM\Id
+     *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
      * @ORM\GeneratedValue
      */
@@ -30,6 +30,7 @@ class Departments
 
     /**
      * @var string
+     * @ORM\Id
      * @ORM\Column(name="code", type="string", length=3, nullable=false)
      */
     private $code;
@@ -65,15 +66,6 @@ class Departments
 
     private $regionCode;
 
-  /*  /**
-     * @var Cities
-     *
-     * @ORM\ManyToOne(targetEntity="App\Entity\Cities")
-     * @ORM\JoinColumn(name="region_code", referencedColumnName="code" )
-     */
-
-
-    private $cities;
 
 
     public function __construct()

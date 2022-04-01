@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c9f99de-0a6d-43e7-b0f7-0f625ef121a4" name="Changes" comment="nouvelle table add + ajout des photos">
+    <list default="true" id="3c9f99de-0a6d-43e7-b0f7-0f625ef121a4" name="Changes" comment="modification dans les entités ad departments lodge regions">
+      <change afterPath="$PROJECT_DIR$/src/Controller/AddAdController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/OwnerController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/DescriptionType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/add_ad/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/owner/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ad.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Departments.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Departments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vue/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Lodge.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Lodge.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Regions.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Regions.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,12 +143,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="279OSm200hHBmFfMEXMZwNHk8Jl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -166,7 +173,8 @@
       <option name="presentableId" value="Default" />
       <updated>1648728838037</updated>
       <workItem from="1648728841784" duration="1300000" />
-      <workItem from="1648730156716" duration="6987000" />
+      <workItem from="1648730156716" duration="24882000" />
+      <workItem from="1648817052716" duration="4436000" />
     </task>
     <task id="LOCAL-00001" summary="modif Houssem">
       <created>1648729766634</created>
@@ -182,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648735513446</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="modification dans les entités ad departments lodge regions">
+      <created>1648737665594</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648737665594</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,8 +215,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="modif Houssem" />
     <MESSAGE value="nouvelle table add + ajout des photos" />
-    <option name="LAST_COMMIT_MESSAGE" value="nouvelle table add + ajout des photos" />
+    <MESSAGE value="modification dans les entités ad departments lodge regions" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification dans les entités ad departments lodge regions" />
   </component>
 </project>

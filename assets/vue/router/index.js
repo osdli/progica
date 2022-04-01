@@ -12,8 +12,8 @@ export default router = createRouter({
   linkExactActiveClass: "active", 
   routes: [
     {
-      path: "/home",
-      name: "Accueil",
+      path: "/",
+      name: "app_default",
       component: Home
     },
     {

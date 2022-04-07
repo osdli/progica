@@ -35,7 +35,10 @@ class DescriptionType extends AbstractType
                 'attr' => [
                     'placeholder' => 'Merci d\'ajouter ici la description de votre bien']
             ])
-            ->add('picture', FileType::class)
+            ->add('picture', FileType::class,[
+
+                'required' => false,
+             ])
             ->add('animal', CheckboxType::class,
             ['label'=> 'Si  vous autorisez les animaux veuillez cocher cette case'])
             ->add('animal_cost', MoneyType::class, [
@@ -47,11 +50,11 @@ class DescriptionType extends AbstractType
             ->add('low_season_price', MoneyType::class, [
                 'label'=>'Prix saison basse'
             ])
-            ->add('location', EntityType::class,[
+           ->add('location', EntityType::class,[
                 'class' => Cities::class,
                 'query_builder' => function (CitiesRepository $er) {
                 return $er ->createQueryBuilder('c')
-                    ->orderBy('c.name', 'ASC');
+                    ->orderBy('c.name', 'ASC')->setMaxResults(50);
                 },
                 'choice_label' => 'name',
             ])

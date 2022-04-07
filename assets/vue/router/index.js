@@ -1,18 +1,17 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "./../views/Home.vue";
 import Informations from "./../views/Informations.vue";
 import Photos from "./../views/Photos.vue";
 import Contact from "./../views/Contact.vue";
 
 
-let router;
-export default router = createRouter({
-  history: createWebHashHistory(),
-  linkActiveClass: "active", 
-  linkExactActiveClass: "active", 
+const router = createRouter({
+  history: createWebHistory(),
+  linkActiveClass: "active",
+  linkExactActiveClass: "active",
   routes: [
     {
-      path: "/",
+      path: "/home",
       name: "app_default",
       component: Home
     },
@@ -34,3 +33,4 @@ export default router = createRouter({
   ]
 });
 
+export default router

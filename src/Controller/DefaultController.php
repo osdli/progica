@@ -16,6 +16,7 @@ use App\Repository\OptionRepository;
 
 class DefaultController extends AbstractController
 {
+
     #[Route('/', name: 'app_default')]
     public function index(RegionsRepository $regionsRepo, DepartmentsRepository $departmentsRepo, CitiesRepository $citiesRepo, OptionRepository $optionRepo  ): Response
     {

@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c9f99de-0a6d-43e7-b0f7-0f625ef121a4" name="Changes" comment="fixtures">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/DescriptionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/DescriptionType.php" afterDir="false" />
-    </list>
+    <list default="true" id="3c9f99de-0a6d-43e7-b0f7-0f625ef121a4" name="Changes" comment="fix commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +199,7 @@
       <workItem from="1648817052716" duration="8267000" />
       <workItem from="1649317653804" duration="22174000" />
       <workItem from="1649418045289" duration="5959000" />
-      <workItem from="1649661181022" duration="20729000" />
+      <workItem from="1649661181022" duration="21098000" />
     </task>
     <task id="LOCAL-00001" summary="modif Houssem">
       <created>1648729766634</created>
@@ -253,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649689083416</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix commit">
+      <created>1649690901068</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1649690901068</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +282,8 @@
     <MESSAGE value="ajout controller add + formulaire d'annonce" />
     <MESSAGE value="reajustement avec vue" />
     <MESSAGE value="fixtures" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixtures" />
+    <MESSAGE value="fix commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

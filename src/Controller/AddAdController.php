@@ -15,23 +15,27 @@ class AddAdController extends AbstractController
     #[Route('/ajouter-annonce', name: 'app_add_ad')]
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
+        $notification = null;
         $ad = new Lodge();
         $form = $this->createForm(DescriptionType::class, $ad);
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
-
             $ad = $form->getData();
-
             $entityManager->persist($ad);
             $entityManager->flush();
-
+            $notification = "Votre annonce est en ligne.";
+            return $this->render('owner/index.html.twig',[
+                'id' => $ad->getId()
+            ]); 
+        } else {
+            $notification = "Veuillez vérifier le formulaire.";
         }
-
-        return $this->render('add_ad/index.html.twig',  [
-            'form'=>$form->createView()
-        ]);
-        //->json(['']);
-    }
+        return $this->render('add_ad/index.html.twig',[
+            'form' => $form->createView(),
+            'notification' => $notification
+        ]); 
+        
+    }   
 }

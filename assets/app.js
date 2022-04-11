@@ -11,3 +11,7 @@ import './styles/app.css';
 // start the Stimulus application
 require('bootstrap');
 import './bootstrap';
+
+// $.getJSON('/jquery/getjsondata', {name:'Scities'}, function (CitiesRepository ){
+//    $('c').append(CitiesRepository.name);
+//});

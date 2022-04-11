@@ -34,6 +34,7 @@ class DefaultController extends AbstractController
     public function testVueAurelie()
     {
         return $this->render('default/test_vue_aurelie.html.twig');
+
     }
 }
 

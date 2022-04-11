@@ -40,9 +40,12 @@ class DescriptionType extends AbstractType
                 'required' => false,
              ])
             ->add('animal', CheckboxType::class,
-            ['label'=> 'Si  vous autorisez les animaux veuillez cocher cette case'])
+            ['label'=> 'Si  vous autorisez les animaux veuillez cocher cette case',
+                'required' => false,])
+
             ->add('animal_cost', MoneyType::class, [
-                'label'=>'Supplément de paiement en cas de possession d\'animaux'
+                'label'=>'Supplément de paiement en cas de possession d\'animaux',
+                'required' => false,
             ])
             ->add('high_season_price', MoneyType::class, [
                 'label'=>'Prix saison haute'

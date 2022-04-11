@@ -32,5 +32,6 @@ class AddAdController extends AbstractController
         return $this->render('add_ad/index.html.twig',  [
             'form'=>$form->createView()
         ]);
+        //->json(['']);
     }
 }

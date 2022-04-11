@@ -47,7 +47,8 @@
         "symfony/yaml": "5.4.*",
         "symfonycasts/verify-email-bundle": "^1.10",
         "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "^2.12|^3.0",
+        "vich/uploader-bundle": "^1.19"
     },
     "config": {
         "allow-plugins": {
@@ -100,6 +101,7 @@
     "require-dev": {
         "api-platform/core": "^2.6",
         "doctrine/doctrine-fixtures-bundle": "^3.4",
+        "hautelook/alice-bundle": "^2.10",
         "nelmio/cors-bundle": "^2.2",
         "symfony/debug-bundle": "5.4.*",
         "symfony/maker-bundle": "^1.38",

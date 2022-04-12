@@ -1,5 +1,9 @@
 @import "~bootstrap";
 
+.navbar-item-custom a {
+    color: #FFFFFF;
+}
+
 .section {
     position: relative;
     height: 100vh;

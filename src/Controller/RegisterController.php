@@ -17,6 +17,8 @@ class RegisterController extends AbstractController
     #[Route('/inscription', name: 'app_register')]
     public function index(Request $request, EntityManagerInterface $entityManager, UserPasswordEncoderInterface $encoder): Response
     {
+        $notification = null;
+
         $user = new User();
         $form = $this->createForm(RegisterType::class, $user);
 
@@ -31,10 +33,14 @@ class RegisterController extends AbstractController
 
             $entityManager->persist($user);
             $entityManager->flush();
+            $notification = "Votre compte à bien été créé.";
+
+
         }
 
         return $this->render('register/index.html.twig', [
-            'form'=>$form->createView()
+            'form'=>$form->createView(),
+            'notification' => $notification
         ]);
     }
 }

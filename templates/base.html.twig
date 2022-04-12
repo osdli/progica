@@ -3,7 +3,26 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
     <title>{% block title %}Progica{% endblock %}</title>
+
 
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
@@ -16,8 +35,43 @@
 
 </head>
 <body oncontextmenu='return false' class='snippet-body'>
-<div class="container">
-    <header class="blog-header py-3">
+
+<header>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="{{ path('app_default') }}">Progica</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Gites</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Notre histoire</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <div class="navbar-item-custom">
+                {% if app.user %}
+                    <a href="{{ path('app_account') }}">Mon compte<small>({{ app.user.firstname }})</small></a> | <a
+                        href="{{ path('app_logout') }}">Déconnexion</a>
+                {% else %}
+                    <a href="{{ path('app_login') }}">Connexion</a> | <a href="{{ path('app_register') }}">Inscription</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+
+    {#   <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
                 {% if app.user %}
@@ -39,22 +93,53 @@
                 {% endif %}
             </div>
         </div>
-    </header>
+    </header> #}
 
-</div>
 
 {% block body %}
 
 {% endblock %}
 
 
-<footer class="blog-footer">
-    <p>Blog template built for <a href="#">PROGICA</a> by <a
-                href="https://twitter.com/mdo">@mdo</a>.
-    </p>
-    <p>
-        <a href="#">Plus haut</a>
-    </p>
+<!--</footer>-->
+<footer class="bg-dark text-center text-white fixed-bottom">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="..assets/images/logo-facebook.jpg" role="button"
+            ><i class="fab fa-facebook-f"></i
+                ></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="../assets/images/twitter.png" role="button"
+            ><i class="fab fa-twitter"></i
+                ></a>
+
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="../assets/images/youtub.jpg" role="button"
+            ><i class="-youtube"></i
+                ></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="../assets/images/linkeding.jpg" role="button"
+            ><i class="fab fa-linkedin-in"></i
+                ></a>
+
+
+        </section>
+        <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright - All Rights Reserved:
+        <a class="text-white" href="https://mdbootstrap.com/">Progica</a>
+    </div>
+    <!-- Copyright -->
 </footer>
 
 </body>

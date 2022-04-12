@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 class SearchController extends AbstractController
 {
     /**
-     * @Route("/recherche", name="app_search")
+     * @Route("/search", name="app_search")
      */
     public function search(Request $request)
     {

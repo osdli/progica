@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/proprietaire', name: 'owner_')]
+#[Route('/compte-proprietaire', name: 'owner_')]
 class OwnerController extends AbstractController
 {
     #[Route('/', name: 'index')]

@@ -4,8 +4,43 @@
 
 {% block body %}
 
+    <hr>
+    <hr>
     <h1>Bienvenue {{ (app.user.firstname) }} dans votre compte! </h1>
-
+    <div class="profile-area__nav-wrapper  ">
+        <ul class="profile-area__nav" data-et-view="YQKSXPTLKGBfSOaKecNfTRe:1 YQKSXPTLKGBfSOaKecNfTRe:4 YTBAWTWEUXFSOERXUC:1">
+            <li>
+                <a href="#" class="js-insiderguides-track" data-trackname="Dashboard" data-acc-aa-db="nav_dashboard" data-et-click="customGoal:YQKSXPTLKGBfSOaSJTSXeUMAae:2">
+                    <i aria-hidden="true" class="profile-area__nav-icon profile-area__nav-icon_smaller bicon bicon-profiledash"></i>
+                    Accueil
+                </a>
+            </li>
+            <li class="selected">
+                <a href="#" class="js-insiderguides-track guides--bookings" data-trackname="My reservations" data-et-click="customGoal:ABVYUYNaXTaXHBYeNTDVXORe:2" data-acc-aa-db="nav_reservations" aria-current="page">
+                    <i aria-hidden="true" class="profile-area__nav-icon profile-area__nav-icon_smaller bicon bicon-suitcase"></i>
+                    Réservations
+                </a>
+            </li>
+            <li>
+                <a href="#" class="js-insiderguides-track guides--reviews" data-trackname="Review Timeline" data-acc-aa-db="nav_timeline">
+                    <i aria-hidden="true" class="profile-area__nav-icon profile-area__nav-icon_smaller bicon bicon-reviewtimeline"></i>
+                    Commentaires
+                </a>
+            </li>
+            <li>
+                <a href="#" class="js-insiderguides-track" data-trackname="Settings" data-acc-aa-db="nav_settings">
+                    <i aria-hidden="true" class="profile-area__nav-icon profile-area__nav-icon_smaller bicon bicon-settings"></i>
+                    Paramètres
+                </a>
+            </li>
+            <li class="profile-area__nav-item-myreferrals">
+                <a rel="noopener" href="{{ path('app_add_ad') }}" target="_blank" data-acc-aa-db="nav_join">
+                    <i aria-hidden="true" class="profile-area__nav-icon profile-area__nav-icon_smaller bicon bicon-homecrop"></i>
+                    Ajoutez votre gîte
+                </a>
+            </li>
+        </ul>
+    </div>
     <hr>
     <a href="{{ path('app_account_password') }}">Modifier mon mot de passe</a><br/>
 

@@ -60,16 +60,16 @@ class DescriptionType extends AbstractType
                 'attr' => [
                     'placeholder' => 'Merci de rajouter l\'emplacement de votre bien ']
             ])
-//-------------
-        //    ->add('location', EntityType::class,[
-        //         'class' => Cities::class,
-        //         'query_builder' => function (CitiesRepository $er) {
-        //         return $er ->createQueryBuilder('c')
-        //             ->orderBy('c.name', 'ASC')->setMaxResults(50);
-        //         },
-        //         'choice_label' => 'name',
-        //     ])
-//-------------
+
+            ->add('location', EntityType::class,[
+                 'class' => Cities::class,
+                'query_builder' => function (CitiesRepository $er) {
+                return $er ->createQueryBuilder('c')
+                    ->orderBy('c.name', 'ASC')->setMaxResults(50);
+                 },
+                 'choice_label' => 'name',
+             ])
+
             ->add('area',TextType::class, [
                 'label' => 'La surface de votre résidence',
 
